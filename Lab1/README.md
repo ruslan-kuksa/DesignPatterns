@@ -36,5 +36,5 @@
     - [Reporting.cs](ClassLibrary/Reporting.cs)
 ### 7. Fail Fast
 - **Implementation**: The system uses checks and exceptions to quickly fail when incorrect data is input, as seen in `SetMoney` in the `Money` class and in the `Product`.
-    - [Money.cs: SetMoney method](ClassLibrary/Money.cs#L20)
-    - [Product.cs: ReducePrice method](ClassLibrary/Product.cs#L26)
+    - [Money.cs: SetMoney method](ClassLibrary/Money.cs#L22)
+    - [Product.cs: ReducePrice method](ClassLibrary/Product.cs#L27)
