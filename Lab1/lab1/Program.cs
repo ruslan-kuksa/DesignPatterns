@@ -16,11 +16,11 @@ namespace Classlibrary
             warehouse.AddProduct(product);
             reporting.InventoryReport(warehouse);
 
-            product.ReducePrice(149, 20);
+            product.ReducePrice(141, 120);
             Console.WriteLine($"New price of {product.Name}: {product.Price}");
 
             reporting.RegisterDelivery(new List<IProduct> { product }, DateTime.Now);
-            reporting.RegisterShipment(new List<IProduct> { product }, DateTime.Now);
+            reporting.RegisterShipment(new List<IProduct> { product }, DateTime(now.Year, now.Month, now.Day, 0, 0, 0, DateTimeKind.Utc).AddDays(-1));
             reporting.InventoryReport(warehouse);
 
             Console.WriteLine($"Total quantity in warehouse: {warehouse.GetTotalQuantity()}");

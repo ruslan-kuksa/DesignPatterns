@@ -12,5 +12,6 @@ namespace ClassLibrary
         void AddProduct(IProduct product);
         void RemoveProduct(IProduct product);
         List<IProduct> GetInventory();
+        int GetTotalQuantity();
     }
 }
