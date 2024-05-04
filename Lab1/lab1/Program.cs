@@ -20,7 +20,7 @@ namespace Classlibrary
             Console.WriteLine($"New price of {product.Name}: {product.Price}");
 
             reporting.RegisterDelivery(new List<IProduct> { product }, DateTime.Now);
-            reporting.RegisterShipment(new List<IProduct> { product }, DateTime(now.Year, now.Month, now.Day, 0, 0, 0, DateTimeKind.Utc).AddDays(-1));
+            reporting.RegisterShipment(new List<IProduct> { product }, DateTime.Now);
             reporting.InventoryReport(warehouse);
 
             Console.WriteLine($"Total quantity in warehouse: {warehouse.GetTotalQuantity()}");
