@@ -15,8 +15,8 @@
     - [IMoney.cs](ClassLibrary/IMoney.cs)
     - [IProduct.cs](ClassLibrary/IProduct.cs)
     - [IWarehouse.cs](ClassLibrary/IWarehouse.cs)
-- **Liskov Substitution Principle**: There don't have specific implementations or replacements to fully appreciate this principle.
-- **Interface Segregation Principle**: There don't have specific implementations.
+- **Liskov Substitution Principle**: There don't have specific implementations or replacements in my code to fully appreciate this principle.
+- **Interface Segregation Principle**: There don't have specific implementations in my code.
 - **Dependency Inversion Principle**: High-level modules like `Reporting` depend on abstractions `IWarehouse` and `IProduct` rather than concrete classes.
     - [Reporting.cs](ClassLibrary/Reporting.cs)
 
