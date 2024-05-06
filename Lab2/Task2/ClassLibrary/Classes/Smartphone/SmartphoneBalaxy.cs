@@ -8,7 +8,7 @@ namespace ClassLibrary.Classes
 {
     public class SmartphoneBalaxy : ISmartphone
     {
-        public string UsefulFunctionISmartphone()
+        public string UsefulFunctionSmartphone()
         {
             return "That is SmartphoneBalaxy";
         }

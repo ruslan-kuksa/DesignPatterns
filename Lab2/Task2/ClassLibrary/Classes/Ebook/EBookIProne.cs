@@ -8,7 +8,7 @@ namespace ClassLibrary.Classes
 {
     public class EBookIProne : IEBook
     {
-        public string UsefulFunctionIEBook()
+        public string UsefulFunctionEBook()
         {
             return "That is EBookIProne";
         }

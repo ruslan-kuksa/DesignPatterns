@@ -16,8 +16,8 @@ class Program
 
         Console.WriteLine(laptop.UsefulFunctionLaptop());
         Console.WriteLine(netbook.UsefulFunctionNetbook());
-        Console.WriteLine(ebook.UsefulFunctionIEBook());
-        Console.WriteLine(smartphone.UsefulFunctionISmartphone());
+        Console.WriteLine(ebook.UsefulFunctionEBook());
+        Console.WriteLine(smartphone.UsefulFunctionSmartphone());
         Console.WriteLine();
         IDevicesFactory factory2 = new BalaxyFactory();
         ILaptop laptop2 = factory2.CreateLaptop();
@@ -27,7 +27,7 @@ class Program
 
         Console.WriteLine(laptop2.UsefulFunctionLaptop());
         Console.WriteLine(netbook2.UsefulFunctionNetbook());
-        Console.WriteLine(ebook2.UsefulFunctionIEBook());
-        Console.WriteLine(smartphone2.UsefulFunctionISmartphone());
+        Console.WriteLine(ebook2.UsefulFunctionEBook());
+        Console.WriteLine(smartphone2.UsefulFunctionSmartphone());
     }
 }

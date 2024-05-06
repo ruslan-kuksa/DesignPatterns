@@ -8,7 +8,7 @@ namespace ClassLibrary.Classes
 {
     public class EBookBalaxy : IEBook
     {
-        public string UsefulFunctionIEBook()
+        public string UsefulFunctionEBook()
         {
             return "That is EBookBalaxy";
         }

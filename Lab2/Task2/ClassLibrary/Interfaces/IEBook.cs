@@ -8,6 +8,6 @@ namespace ClassLibrary
 {
     public interface IEBook
     {
-        string UsefulFunctionIEBook();
+        string UsefulFunctionEBook();
     }
 }

@@ -8,6 +8,6 @@ namespace ClassLibrary
 {
     public interface ISmartphone
     {
-        string UsefulFunctionISmartphone();
+        string UsefulFunctionSmartphone();
     }
 }
