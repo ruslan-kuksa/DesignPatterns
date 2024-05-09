@@ -4,20 +4,30 @@ public class Program
 {
     public static void Main()
     {
-        LightElementNode div = new LightElementNode("div", isBlock: true, isSelfClosing: false);
-        div.AddClass("container");
+        string basePath = AppDomain.CurrentDomain.BaseDirectory;
+        string resolvedPath = Path.Combine(basePath, @"..\..\..\..\task6\", "RomeoAndJuliet.txt");
 
-        LightElementNode p = new LightElementNode("p", isBlock: true, isSelfClosing: false);
-        p.AddChild(new LightTextNode("Це простий параграф з текстом."));
-        div.AddChild(p);
+        List<LightElementNode> htmlNodes = new List<LightElementNode>();
+        CodeHTML nodeCreator = new CodeHTML();
+        bool isFirstLine = true;
 
-        LightElementNode img = new LightElementNode("img", isBlock: false, isSelfClosing: true);
-        img.AddClass("thumbnail");
-        div.AddChild(img);
+        using (StreamReader reader = new StreamReader(resolvedPath))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                LightElementNode node = nodeCreator.AddHtmlTagsToLine(line, isFirstLine);
+                htmlNodes.Add(node);
+                isFirstLine = false;
+            }
+        }
 
-        Console.WriteLine("InnerHTML of div:");
-        Console.WriteLine(div.InnerHTML());
-        Console.WriteLine("OuterHTML of div:");
-        Console.WriteLine(div.OuterHTML());
+        foreach (LightElementNode node in htmlNodes)
+        {
+            Console.WriteLine(node.OuterHTML());
+        }
+
+        long totalMemory = GC.GetTotalMemory(true);
+        Console.WriteLine($"Total memory used: {totalMemory} bytes");
     }
 }

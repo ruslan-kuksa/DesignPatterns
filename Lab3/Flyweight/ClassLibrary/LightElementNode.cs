@@ -8,20 +8,17 @@ namespace ClassLibrary
 {
     public class LightElementNode : LightNode
     {
-        public string TagName { get; set; }
-        public bool IsBlock { get; set; }
-        public bool IsSelfClosing { get; set; }
+        public ElementsTypeHTML ElementType { get; }
         public List<string> Classes { get; set; }
         public List<LightNode> Children { get; set; }
 
-        public LightElementNode(string tagName, bool isBlock, bool isSelfClosing)
+        public LightElementNode(ElementsTypeHTML elementType)
         {
-            TagName = tagName;
-            IsBlock = isBlock;
-            IsSelfClosing = isSelfClosing;
+            ElementType = elementType;
             Classes = new List<string>();
             Children = new List<LightNode>();
         }
+
 
         public void AddChild(LightNode child)
         {
@@ -45,12 +42,12 @@ namespace ClassLibrary
         public override string ToHtml()
         {
             string tagClass = Classes.Count > 0 ? $" class=\"{string.Join(" ", Classes)}\"" : "";
-            string html = $"<{TagName}{tagClass}>";
+            string html = $"<{ElementType.TagName}{tagClass}>";
 
-            if (!IsSelfClosing)
+            if (!ElementType.IsSelfClosing)
             {
                 html += InnerHTML();
-                html += $"</{TagName}>";
+                html += $"</{ElementType.TagName}>";
             }
 
             return html;
