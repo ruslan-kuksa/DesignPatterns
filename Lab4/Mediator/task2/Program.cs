@@ -2,7 +2,7 @@
 
 class Program
 {
-    static void Main(string[] args)
+    public static void Main()
     {
         Runway runway1 = new Runway();
         Runway runway2 = new Runway();
