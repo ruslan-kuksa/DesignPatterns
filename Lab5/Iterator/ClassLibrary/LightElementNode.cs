@@ -60,5 +60,15 @@ namespace ClassLibrary
         {
             return ToHtml();
         }
+
+        public LightHTMLIterator GetDepthFirstIterator()
+        {
+            return new DepthFirstIterator(this);
+        }
+
+        public LightHTMLIterator GetBreadthFirstIterator()
+        {
+            return new BreadthFirstIterator(this);
+        }
     }
 }
